@@ -1,0 +1,2 @@
+import globals from 'globals';
+export default [{ignores:['dist/**','node_modules/**']},{files:['src/**/*.{js,jsx}'],languageOptions:{ecmaVersion:'latest',sourceType:'module',parserOptions:{ecmaFeatures:{jsx:true}},globals:globals.browser},rules:{'no-undef':'error','no-eval':'error','no-implied-eval':'error','no-new-func':'error','no-dupe-keys':'error','no-unreachable':'error','no-debugger':'error','constructor-super':'error','no-unsafe-negation':'error'}}];

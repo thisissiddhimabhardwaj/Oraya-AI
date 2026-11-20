@@ -1,0 +1,130 @@
+.auth-editorial .learning-universe {
+  position: relative;
+}
+.auth-editorial .learning-universe > svg {
+  overflow: visible;
+}
+.auth-editorial .universe-video {
+  position: absolute;
+  top: 28%;
+  left: 13%;
+  width: 25%;
+  height: 22%;
+  display: grid;
+  place-items: center;
+  background: #a6c7c2;
+  transform: rotate(-11deg);
+  border: 2px solid #fff5df;
+  outline: 1px solid #99b3ad;
+  border-radius: 7px;
+}
+.auth-editorial .video-play {
+  background: #fff5e6;
+  color: #799e96;
+  border-radius: 50%;
+  padding: 9px;
+  display: flex;
+}
+.auth-editorial .video-track {
+  position: absolute;
+  bottom: 24%;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background: #e5eddb;
+}
+.auth-editorial .video-track i {
+  display: block;
+  width: 43%;
+  height: 100%;
+  background: #d9805f;
+}
+.auth-editorial .universe-video small {
+  font-size: 6px;
+  position: absolute;
+  bottom: 7%;
+  color: #4c736a;
+}
+.auth-editorial .universe-tutor {
+  position: absolute;
+  right: 3%;
+  top: 43%;
+  width: 32%;
+  padding: 15px;
+  background: #fff7e9;
+  border: 1px solid #ddc8ac;
+  transform: rotate(9deg);
+  border-radius: 7px;
+  box-shadow: 0 15px 25px #ac8b5b13;
+}
+.auth-editorial .universe-tutor strong {
+  font-size: 20px;
+  font-family: var(--font-display);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.auth-editorial .universe-tutor strong svg {
+  color: #d87b5c;
+}
+.auth-editorial .universe-tutor > span {
+  display: block;
+  padding: 8px;
+  background: #f5e9d5;
+  border-radius: 4px;
+  font-size: 9px;
+  margin-top: 10px;
+}
+.auth-editorial .universe-tutor > i {
+  display: flex;
+  position: absolute;
+  bottom: -10px;
+  right: 15px;
+  background: #d88766;
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+}
+.auth-editorial .universe-orbit-label {
+  position: absolute;
+  right: 7%;
+  top: 17%;
+  font-size: 6px;
+  letter-spacing: 0.2em;
+  transform: rotate(17deg);
+  color: #9a9479;
+}
+.auth-editorial .universe-tutor {
+  padding: 10px;
+}
+.auth-editorial .universe-tutor strong {
+  font-size: 14px;
+  gap: 4px;
+}
+.auth-editorial .universe-tutor strong svg {
+  width: 13px;
+}
+.auth-editorial .universe-tutor > span {
+  font-size: 6px;
+  padding: 6px;
+  margin-top: 7px;
+}
+.auth-editorial .universe-tutor > i {
+  padding: 3px;
+  right: 10px;
+}
+.auth-editorial .universe-tutor > i svg {
+  width: 13px;
+}
+.auth-editorial .video-play {
+  padding: 6px;
+}
+.auth-editorial .video-play svg {
+  width: 17px;
+}
+.auth-editorial .universe-video small {
+  font-size: 4px;
+}
+.auth-editorial .universe-orbit-label {
+  font-size: 4px;
+}

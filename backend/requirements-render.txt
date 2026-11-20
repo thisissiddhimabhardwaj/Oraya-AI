@@ -1,0 +1,2 @@
+-r requirements.txt
+# Renderer uses Pillow and system FFmpeg/FFprobe; no Manim dependency.

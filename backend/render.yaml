@@ -1,0 +1,41 @@
+# Render Blueprint — ORAYA API
+# Dashboard → New → Blueprint → select this repo; Render reads backend/render.yaml.
+# Set the `sync: false` values in the dashboard when prompted (they are secrets/config).
+
+services:
+  - type: web
+    name: oraya-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    # Root alias for uptime probes (also served at /api/v1/health).
+    healthCheckPath: /health
+    envVars:
+      # Supabase Postgres connection string, e.g.
+      # postgresql://user:pass@host:6543/postgres?sslmode=require
+      - key: DATABASE_URL
+        sync: false
+      # Long random string (Render can generate one).
+      - key: JWT_SECRET
+        generateValue: true
+      # Server-side only — NEVER set this in Vercel. Empty → demo mode.
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.1-flash-lite
+      - key: GEMINI_TUTOR_MODEL
+        value: gemini-3.1-flash-lite
+      # Exact frontend origin(s), e.g. https://your-app.vercel.app
+      - key: CORS_ORIGINS
+        sync: false
+      - key: STORAGE_DIR
+        value: /data/storage
+
+    # Persistent disk so generated MP4s, PDF exports and uploaded transcripts
+    # survive redeploys. Disks require a paid instance; without one, files are
+    # ephemeral and downloads 404 after a redeploy/restart.
+    # disk:
+    #   name: oraya-storage
+    #   mountPath: /data/storage
+    #   sizeGB: 5

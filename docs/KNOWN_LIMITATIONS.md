@@ -1,0 +1,15 @@
+# Known limitations
+
+1. **Gemini is not configured in this environment.** Tutor, generated notes/quizzes, AI-authored video scripts, new spatial scenes and object tutoring cannot be honestly certified end-to-end. Their connected code, persistence, schema and error contracts pass tests; injected provider tests are not live generation. Configure GEMINI_API_KEY privately, restart, and run the live acceptance sequence below. No mock success is substituted.
+2. The requested live generated-scene checks for Solar System, anatomy, chemistry, computer architecture, mathematics, AI and a previously unsupported topic remain blocked by that missing key. Optional hardcoded demonstrations remain separate and labeled.
+3. Video output is scene-based educational illustration with narration and subtitles, not cinematic generative footage. The verified no-key mode reads actual source excerpts and is explicitly labeled as having no AI-authored explanation. The separate renderer proof uses an authored test script.
+4. The default speech provider is macOS `say` (Samantha). It requires a normal process with access to OS speech; a restricted sandbox produced empty audio, correctly rejected. gTTS is optional, network-dependent and sends narration to its service. No forced silent fallback exists.
+5. Workers use in-process bounded thread pools and SQLite. Use one backend process. Interrupted active jobs become failed/retryable; queued jobs resume. This is not a distributed production queue or a high-availability deployment.
+6. Spatial scenes are educational schematics, not numerical physics/medical simulations. Geometry/animations are bounded. WebGL is required; a readable error is shown when renderer creation fails. Missing-WebGL behavior was reviewed in code, not exercised with a disabled GPU during this pass.
+7. Static type checking currently covers the new dynamic renderer and scene contract. Legacy JSX is validated by ESLint and production compilation, not full strict TypeScript conversion. The lazily loaded Three.js chunk produces a non-fatal size warning (~540 kB minified).
+8. YouTube captions depend on remote availability; current tests cover URL validation and local ingestion contracts, not a live YouTube caption fetch. Scanned PDF OCR, account email verification, password reset, production deployment/rate-limiting and distributed job cancellation are not added.
+9. Three legacy FastAPI 422-name deprecation warnings remain; all backend tests pass.
+
+## Live acceptance after configuring Gemini
+
+Register/login, upload a source, ask Tutor in each explanation style, inspect every returned source, generate notes and a quiz, complete a quiz/revision, generate a video and check playback/download. Generate the seven topic categories above, inspect/select/isolate objects, advance guided steps, submit every challenge kind, ask an object question, reload and reopen saved progress. Test a second account cannot access those resources. Use POST /api/v1/ai/check with authentication to diagnose account/model access first. Tests must use the provider; do not set ALLOW_DEMO_AI=true to claim acceptance.

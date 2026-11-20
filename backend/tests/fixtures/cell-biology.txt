@@ -1,0 +1,6 @@
+Cells are the basic structural and functional units of life. An animal cell has a cell membrane that controls movement of substances into and out of the cell.
+The nucleus contains genetic information stored in DNA. DNA provides instructions used to make proteins.
+Ribosomes assemble proteins by translating messenger RNA. Ribosomes may be free in the cytoplasm or attached to rough endoplasmic reticulum.
+Mitochondria produce much of the cell's ATP through cellular respiration. ATP is used to power many cellular processes.
+The Golgi apparatus modifies, sorts, and packages proteins and lipids for delivery. Lysosomes break down materials using enzymes.
+These organelles work together. The nucleus stores instructions, ribosomes build proteins, mitochondria supply energy, and the Golgi apparatus packages products.

@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Python environment, tools and generated runtime data
+.venv/
+__pycache__/
+.pytest_cache/
+.tools/
+storage/
+*.db
+
+# Agent tooling (not project source)
+.opencode/
